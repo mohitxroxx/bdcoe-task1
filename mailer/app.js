@@ -1,20 +1,13 @@
-const express = require("express");
+const express = require('express');
+const appRoute = require('./route/route.js')
+
 const app = express();
-let PORT = 5000;
+const PORT = 6000;
 
-const sendMail = require("./sendMail.js");
+app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Server Up and Running");
-});
+app.use('/api', appRoute);
 
-app.get("/sendmail", sendMail);
-
-const start = async () => {
-  try {
-    app.listen(PORT, () => {
-      console.log(`I am live at port`,PORT);
-    });
-  } catch (error) {}
-};
-start();
+app.listen(PORT, () => {
+    console.log(`Server is running on`,PORT)
+})

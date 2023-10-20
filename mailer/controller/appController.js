@@ -6,8 +6,8 @@ const signup = (req, res) => {
     let config = {
         service : 'Gmail',
         auth : {
-            user: '<EMAIL@GMAIL.COM>',
-            pass: '<PASSWORD KYU JAAN NA HAI>'
+            user: 'gauss10056@gmail.com',
+            pass: 'lriryydzjtpbtqvb'
         }
     }
     let transporter = nodemailer.createTransport(config);

@@ -16,4 +16,4 @@ app.use('/api/v1/transactions',transactions)
 
 const PORT=process.env.PORT||5000;
 
-app.listen(PORT,console.log('Server Running fine in',process.env.NODE_ENV.yellow,"mode, on PORT",PORT.yellow));
+app.listen(PORT,console.log('ServerA Running fine in',process.env.NODE_ENV.yellow,"mode, on PORT",PORT.yellow));
